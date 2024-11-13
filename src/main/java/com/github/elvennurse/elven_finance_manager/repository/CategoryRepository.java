@@ -14,4 +14,7 @@ public interface CategoryRepository extends JpaRepository<Category, Long> {
 
     // Знаходить категорію за назвою та ідентифікатором користувача
     Optional<Category> findByNameAndUserId(String name, Long userId);
+
+    // Знаходить категорію за ідентифікатором та ідентифікатором користувача
+    Optional<Category> findByIdAndUserId(Long id, Long userId);
 }
